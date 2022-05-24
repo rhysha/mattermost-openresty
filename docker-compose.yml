@@ -3,18 +3,18 @@ version: '2'
 services:
   openresty:
     build: ./
-    #ports:
-    #  - "80:80"
+    ports:
+     - "80:80"
     volumes:
       - "./nginx.conf:/usr/local/openresty/nginx/conf/nginx.conf"
-      - "./src:/code"
-    environment:
-      AUTH_TOKEN: '<auth-token>'
-      BITBUCKET_MATTERMOST_URL: '<bitbucket-mattermost-hook-url>'
-      BITBUCKET_MATTERMOST_USER: 'bitbucket'
-      SENTRY_MATTERMOST_URL: '<sentry-mattermost-hook-url>'
-      SENTRY_MATTERMOST_USER: 'sentry'
-      TEAMCITY_MATTERMOST_URL: '<teamcity-mattermost-hook-url>'
-      TEAMCITY_MATTERMOST_USER: 'teamcity'
-      TEAMCITY_SERVER_URL: '<teamcity-server-url>'
-      TEAMCITY_SERVER_AUTH: '<teamcity-base64-string>'
+    # - "./src:/code"
+    # environment:
+    #   AUTH_TOKEN: '<auth-token>'
+    #   BITBUCKET_MATTERMOST_URL: '<bitbucket-mattermost-hook-url>'
+    #   BITBUCKET_MATTERMOST_USER: 'bitbucket'
+    #   SENTRY_MATTERMOST_URL: '<sentry-mattermost-hook-url>'
+    #   SENTRY_MATTERMOST_USER: 'sentry'
+    #   TEAMCITY_MATTERMOST_URL: '<teamcity-mattermost-hook-url>'
+    #   TEAMCITY_MATTERMOST_USER: 'teamcity'
+    #   TEAMCITY_SERVER_URL: '<teamcity-server-url>'
+    #   TEAMCITY_SERVER_AUTH: '<teamcity-base64-string>'
